@@ -56,10 +56,16 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-content: left;
+}
+
+li input{
+    margin-right: 10px;
 }
 
 .concluida{
     background-color: black;
     color: white;
     font-weight: bolder;
+    text-decoration: line-through;
 }
