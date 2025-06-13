@@ -7,8 +7,18 @@ form.addEventListener("submit", function(event){
     var texto = input.value;
 
     var novaTarefa = document.createElement("li");
+
     var checkbox = document.createElement("input");
+
     checkbox.type = "checkbox";
+    checkbox.addEventListener("change", function(){
+        if(checkbox.checked){
+            novaTarefa.classList.add("concluida");
+        } else{
+            novaTarefa.classList.remove("concluida");
+        }
+    })
+
     novaTarefa.appendChild(checkbox);
     novaTarefa.appendChild(document.createTextNode(texto));
     document.getElementById("lista-tarefas").appendChild(novaTarefa);
